@@ -1,16 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
-        <link rel="shortcut icon" type="x-icon" href="logo.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Joshua Park — Computer Science student at Calvin University. Portfolio of web development, UI/UX, and software projects.">
+        <meta property="og:title" content="Joshua Park — Portfolio">
+        <meta property="og:description" content="Computer Science & Graphic Design. Web development, software engineering, and UI/UX.">
+        <link rel="shortcut icon" type="image/x-icon" href="logo.png">
         <title>Joshua Park Portfolio</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;1,14..32,400&display=swap" rel="stylesheet">
         <link href="style.css" rel="stylesheet">
     </head>
     <body>
-        <div class="header">
-            <div class="header-container">
-                <nav>
-                    <img src="newlogo.png" class= "logo-image">
+        <header class="header">
+            <div class="header-container container">
+                <nav class="nav" aria-label="Primary">
+                    <a href="#Home" class="logo-link"><img src="newlogo.png" alt="Joshua Park home" class="logo-image" width="70" height="70"></a>
                     <ul class="nav-links">
                         <li><a href="#Home">Home</a></li>
                         <li><a href="#Work">Work</a></li>
@@ -19,234 +26,235 @@
                     </ul>
                 </nav>
             </div>
-        </div>
-        <section id="Home">
-        <div class="introbox">
-            <div class = "introlayout">
+        </header>
+        <main>
+        <section id="Home" class="section section--hero" aria-labelledby="hero-heading">
+        <div class="introbox container">
+            <div class="introlayout">
                 <div class="contentbox">
-                    <h1 class = "emoji">👋</h1>
-                    <h1 class="greeting">Hello, I am Joshua Park</h1>
-                    <p class="intro">I am a dedicated and ambitious third-year student at<br> 
-                                Calvin University, pursuing a major in Computer Science<br>
-                                and a minor in Graphic Design. With a keen interest in web <br> 
-                                development, software engineering, and UI/UX, I am eager to leverage <br>
-                                my skills and knowledge to create impactful digital experiences.</p>
+                    <p class="hero-eyebrow" aria-hidden="true">👋</p>
+                    <h1 id="hero-heading" class="greeting">Hello, I am Joshua Park</h1>
+                    <p class="intro">I'm Joshua Park, a computer science student and developer passionate about building clean, user-focused digital experiences. With a background in front-end development and design, I enjoy turning ideas into intuitive and visually engaging applications. I'm especially interested in the intersection of technology and design, where thoughtful interfaces can make a meaningful impact.</p>
+                    <div class="hero-actions">
+                        <a href="#Work" class="btn btn--primary">View work</a>
+                        <a href="https://www.linkedin.com/in/joshuapark72" class="btn btn--ghost" rel="noopener noreferrer" target="_blank">LinkedIn</a>
+                    </div>
                 </div>
                 <div class="image">
-                    <img src="https://lh3.googleusercontent.com/DGDwbCrPRoeCzcX4SlNezzXNXjqvdo7HSoO2NXL_UdPWUwCIgTcjPnVDPzTv7gyRJHr0Rxf_Jh9CoqwdEyPc2QGaJjlRH54rZUCj6iVsENK_q2yrJ8Ah-ba0xtMkO00AVOOHv67dTA=w2400" alt class="image-placement">
+                    <img src="https://lh3.googleusercontent.com/DGDwbCrPRoeCzcX4SlNezzXNXjqvdo7HSoO2NXL_UdPWUwCIgTcjPnVDPzTv7gyRJHr0Rxf_Jh9CoqwdEyPc2QGaJjlRH54rZUCj6iVsENK_q2yrJ8Ah-ba0xtMkO00AVOOHv67dTA=w2400" alt="Portrait of Joshua Park" class="image-placement" width="800" height="1000">
                 </div>
             </div>
         </div>
         </section>
-        <section id="Work">
-            <div class="work">  
-                <div class="work-section">
-                    <div class="work-section-header">
-                        <div class="section-header">
-                            <div class="section-title">
-                                <h1 class="work-heading-1">✍️</h1>
-                                <h1 class="work-heading-2">Selected Work</h1>
+        <section id="Work" class="section section--work" aria-labelledby="work-heading">
+            <div class="work container">
+                <header class="section-heading">
+                    <p class="section-label">Portfolio</p>
+                    <h2 id="work-heading" class="section-title">Selected Work</h2>
+                </header>
+                <div class="project-grid">
+                        <a href="https://github.com/ivanwidjanarkoo/ERP_Sys" class="project-card project-card--tint-c">
+                            <div class="project-card__body">
+                                <h3 class="project-card__title">ERP System</h3>
+                                <p class="project-card__intro">Full-stack ERP for organizations: dashboard metrics, members, roles, events, projects, and finances, plus a Flow Builder for automated workflows. React, Node.js, Express, and PostgreSQL with role-based access.</p>
+                                <span class="project-card__cta">
+                                    <span class="project-card__cta-text">GitHub Repo</span>
+                                    <span class="project-card__cta-arrow" aria-hidden="true">→</span>
+                                </span>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-section">
-                    <div class="project-section-frame">
-                        <a href="https://github.com/orgs/TideyTeam/repositories" class="project-card-1">
-                            <div class="project-card-1-content">
-                                <h1 class="card-1-title">Calvin Klean Laundry App </h1>
-                                <p class="card-1-intro">This is a software engineering project where we developed a laundry app that keeps track of the machines in the college dorms. I spearheaded the UI/UX and the React-Native Application development. 
-                                </p>
-                                <div class="card-1-viewproject">
-                                    <div class="view-1"></div>
-                                    <div class="view-body">Github Repo</div>
-                                    <div class="view-arrow">→</div>
-                                </div>
+                            <div class="project-card__media project-card__media--erp">
+                                <img src="erp-dashboard.png" alt="ERP organization dashboard with members, events, projects, and financial metrics">
                             </div>
-                            <img class="img-Frog" src="Calvin Klean.png">
                         </a>
-                        <a href="https://abstractionwebsite-89f4f.web.app/" class="project-card-2">
-                            <div class="project-card-1-content">
-                                <h1 class="card-1-title">Abstraction Website</h1>
-                                <p class="card-1-intro">Led the design and development of the Abstraction Computer Science Club website, creating an engaging and user-friendly platform to showcase the club's activities and initiatives.
-                                    </p>
-                                <div class="card-1-viewproject">
-                                    <div class="view-1"></div>
-                                    <div class="view-body">Website Link</div>
-                                    <div class="view-arrow">→</div>
-                                </div>
+                        <a href="https://github.com/orgs/TideyTeam/repositories" class="project-card project-card--tint-a">
+                            <div class="project-card__body">
+                                <h3 class="project-card__title">Calvin Klean Laundry App</h3>
+                                <p class="project-card__intro">This is a software engineering project where we developed a laundry app that keeps track of the machines in the college dorms. I spearheaded the UI/UX and the React-Native Application development.</p>
+                                <span class="project-card__cta">
+                                    <span class="project-card__cta-text">GitHub Repo</span>
+                                    <span class="project-card__cta-arrow" aria-hidden="true">→</span>
+                                </span>
                             </div>
-                            <img class="img-Frog" src="Abstraction.png">
-                        </a>  
-                        <a href="https://acrobat.adobe.com/link/review?uri=urn:aaid:scds:US:d1795049-edfd-320e-98df-6e5ed27ae1e7" class="project-card-3">
-                            <div class="project-card-1-content">
-                                <h1 class="card-1-title">Graphic Design Publication</h1>
-                                <p class="card-1-intro">This publication showcases the work I created in Graphic Design Process one. Projects like Grids, Progressive Typography, and Bitmap are featured, which are the building blocks of graphic design.
-                                    </p>
-                                <div class="card-1-viewproject">
-                                    <div class="view-1"></div>
-                                    <div class="view-body">PDF link</div>
-                                    <div class="view-arrow">→</div>
-                                </div>
+                            <div class="project-card__media">
+                                <img src="Calvin Klean.png" alt="Calvin Klean laundry app preview">
                             </div>
-                            <img class="img-Frog" src="GridCover.png">
-                        </a>  
-                        <a href="https://github.com/joshuapark0/Pizza-Website" class="project-card-4">
-                            <div class="project-card-1-content">
-                                <h1 class="card-1-title">Pizza Website</h1>
-                                <p class="card-1-intro">This is web development project where we developed a Pizza website with JavaScript functions. I was able to lead the team with taking charge of the Design and layout of the website, aiming a seamless digital experience tailored for
-                                    pizza orders.</p>
-                                <div class="card-1-viewproject">
-                                    <div class="view-1"></div>
-                                    <div class="view-body">Github Repo</div>
-                                    <div class="view-arrow">→</div>
-                                </div>
+                        </a>
+                        <a href="https://abstractionwebsite-89f4f.web.app/" class="project-card project-card--tint-b">
+                            <div class="project-card__body">
+                                <h3 class="project-card__title">Abstraction Website</h3>
+                                <p class="project-card__intro">Led the design and development of the Abstraction Computer Science Club website, creating an engaging and user-friendly platform to showcase the club's activities and initiatives.</p>
+                                <span class="project-card__cta">
+                                    <span class="project-card__cta-text">Website</span>
+                                    <span class="project-card__cta-arrow" aria-hidden="true">→</span>
+                                </span>
                             </div>
-                            <img class="img-Frog" src="MarioPizzaShop.png">
-                        </a> 
-                        <a href="https://github.com/joshuapark0/MyLuvsWebsite" class="project-card-1">
-                            <div class="project-card-1-content">
-                                <h1 class="card-1-title">MyLuvs Website</h1>
-                                <p class="card-1-intro">This is an ongoing project where I am spearheading the design and development of a mobile-responsive website for MyLuvs, a prominent
-                                    clothing company, aiming a seamless digital experience tailored for
-                                    mobile users.</p>
-                                <div class="card-1-viewproject">
-                                    <div class="view-1"></div>
-                                    <div class="view-body">Github Repo</div>
-                                    <div class="view-arrow">→</div>
-                                </div>
+                            <div class="project-card__media">
+                                <img src="Abstraction.png" alt="Abstraction CS club website preview">
                             </div>
-                            <img class="img-Frog" src="MyLuvsPreview.png">
-                        </a> 
-                        <a href="https://github.com/joshuapark0/Frog-Game.git" class="project-card-2">
-                            <div class="project-card-1-content">
-                                <h1 class="card-1-title">Frog Game</h1>
-                                <p class="card-1-intro">The goal of this game is to catch as many insects in the limited time.
-                                    Every time you click on the insect that moves around the screen, the frog shoots its tongue
-                                    and accumulates points. </p>
-                                <div class="card-1-viewproject">
-                                    <div class="view-1"></div>
-                                    <div class="view-body">Github Repo</div>
-                                    <div class="view-arrow">→</div>
-                                </div>
+                        </a>
+                        <a href="https://acrobat.adobe.com/link/review?uri=urn:aaid:scds:US:d1795049-edfd-320e-98df-6e5ed27ae1e7" class="project-card project-card--tint-c">
+                            <div class="project-card__body">
+                                <h3 class="project-card__title">Graphic Design Publication</h3>
+                                <p class="project-card__intro">This publication showcases the work I created in Graphic Design Process one. Projects like Grids, Progressive Typography, and Bitmap are featured, which are the building blocks of graphic design.</p>
+                                <span class="project-card__cta">
+                                    <span class="project-card__cta-text">PDF</span>
+                                    <span class="project-card__cta-arrow" aria-hidden="true">→</span>
+                                </span>
                             </div>
-                            <img class="img-Frog" src="Frog.png" alt="Frog Game by Joshua Park">
-                        </a> 
-
-                    </div>
+                            <div class="project-card__media">
+                                <img src="GridCover.png" alt="Graphic design publication cover">
+                            </div>
+                        </a>
+                        <a href="https://github.com/joshuapark0/Pizza-Website" class="project-card project-card--tint-d">
+                            <div class="project-card__body">
+                                <h3 class="project-card__title">Pizza Website</h3>
+                                <p class="project-card__intro">This is web development project where we developed a Pizza website with JavaScript functions. I was able to lead the team with taking charge of the Design and layout of the website, aiming a seamless digital experience tailored for pizza orders.</p>
+                                <span class="project-card__cta">
+                                    <span class="project-card__cta-text">GitHub Repo</span>
+                                    <span class="project-card__cta-arrow" aria-hidden="true">→</span>
+                                </span>
+                            </div>
+                            <div class="project-card__media">
+                                <img src="MarioPizzaShop.png" alt="Mario Pizza Shop website preview">
+                            </div>
+                        </a>
+                        <a href="https://github.com/joshuapark0/MyLuvsWebsite" class="project-card project-card--tint-a">
+                            <div class="project-card__body">
+                                <h3 class="project-card__title">MyLuvs Website</h3>
+                                <p class="project-card__intro">This is an ongoing project where I am spearheading the design and development of a mobile-responsive website for MyLuvs, a prominent clothing company, aiming a seamless digital experience tailored for mobile users.</p>
+                                <span class="project-card__cta">
+                                    <span class="project-card__cta-text">GitHub Repo</span>
+                                    <span class="project-card__cta-arrow" aria-hidden="true">→</span>
+                                </span>
+                            </div>
+                            <div class="project-card__media">
+                                <img src="MyLuvsPreview.png" alt="MyLuvs clothing website preview">
+                            </div>
+                        </a>
+                        <a href="https://github.com/joshuapark0/Frog-Game.git" class="project-card project-card--tint-b">
+                            <div class="project-card__body">
+                                <h3 class="project-card__title">Frog Game</h3>
+                                <p class="project-card__intro">The goal of this game is to catch as many insects in the limited time. Every time you click on the insect that moves around the screen, the frog shoots its tongue and accumulates points.</p>
+                                <span class="project-card__cta">
+                                    <span class="project-card__cta-text">GitHub Repo</span>
+                                    <span class="project-card__cta-arrow" aria-hidden="true">→</span>
+                                </span>
+                            </div>
+                            <div class="project-card__media">
+                                <img src="Frog.png" alt="Frog Game by Joshua Park">
+                            </div>
+                        </a>
                 </div>
             </div>
         </section>
-        <section id="About">
-        <div class="about">
-            <div class="about-layout">
-                <div class="about-layout-section">
-                    <div class="about-layout-section-frame">
-                        <div class="a-b-s-f-left">
-                            <h1 class="computerman">👨‍💻</h1>
-                            <h1 class="about-heading">About</h1>
-                        </div>
-                        <div class="a-b-s-f-right">
-                            <a href="https://www.linkedin.com/in/joshuapark72" class="linkedin">
-                                <div class="linkedin-link">View Linkedin</div>
-                            </a>
-                            <div class="linkedin-arrow">→</div>
-                        </div>
-                    </div>
+        <section id="About" class="section section--about" aria-labelledby="about-heading">
+        <div class="about container">
+            <header class="section-heading section-heading--split">
+                <div class="section-heading__main">
+                    <p class="section-label">Background</p>
+                    <h2 id="about-heading" class="section-title">About</h2>
                 </div>
-            </div>
+                <a href="https://www.linkedin.com/in/joshuapark72" class="section-heading__link" rel="noopener noreferrer" target="_blank">View LinkedIn <span aria-hidden="true">→</span></a>
+            </header>
             <div class="about-content">
                 <div class="content-left">
-                    <h4 class="mystory">My Story</h4>
-                    <p class="story-paragraph">I'm excited to share my journey as a passionate and dedicated computer science student. With a steadfast commitment 
-                        to excellence and a genuine curiosity for technology, I have been on an exciting educational adventure that has allowed me to explore and 
-                        learn about the dynamic world of computer science. <br><br>
-
-                        My enthusiasm for design has been an equally vital part of my journey. From crafting immersive games to developing user-friendly websites, 
-                        I've discovered that blending design aesthetics with computer science not only enhances the visual appeal but also elevates the overall 
-                        user experience. This fusion of technology and design is where I thrive, and it's my mission to continue bridging these disciplines to 
-                        craft seamless and delightful digital experiences.<br><br>
-
-                        As of now, my proficiency spans Python, Java, React JS, React Native, Ada, Ruby, Clojure, HTML5, CSS, SQL, C/C#/C++, TypeScript, Angular. However, my hunger for knowledge remains insatiable. I am fueled 
-                        by the desire to not only realize my creative ideas but to also continuously enhance the user experience they offer. This drive propels 
-                        me to eagerly pursue new avenues of learning and innovation. By pushing the boundaries of my skill set, I aim to keep refining and expanding 
-                        my toolkit, ultimately striving to shape a digital landscape that seamlessly marries functionality and aesthetics.</p>
+                    <h3 class="subsection-title">My Story</h3>
+                    <div class="story-paragraph">
+                        <p>I'm a computer science student driven by curiosity and a strong interest in how technology shapes everyday experiences. Over time, what started as an interest in coding has grown into a deeper focus on building thoughtful, user-centered applications.</p>
+                        <p>Design has played a key role in that journey. Whether I'm developing web or mobile applications, I enjoy thinking beyond functionality—considering how something feels to use, how intuitive it is, and how small design decisions can shape the overall experience. For me, the intersection of development and design is where the most meaningful work happens.</p>
+                        <p>Through my coursework, projects, and hands-on experience, I've worked with a range of technologies including Python, Java, React, React Native, TypeScript, and SQL, along with other languages and frameworks. More importantly, I've learned how to adapt quickly, collaborate effectively, and approach problems with both technical and creative perspectives.</p>
+                        <p>I'm always looking to grow—not just by learning new tools, but by building better, more intentional experiences. My goal is to continue developing solutions that are not only functional, but also intuitive, polished, and impactful.</p>
+                    </div>
                 </div>
                 <div class="content-right">
-                    <h4 class="extracurriculars">Experience</h4>
+                    <h3 class="subsection-title">Experience</h3>
                     <div class="extra-content">
                         <div class="extra-1">
-                            <h5 class="heading7">May 2024 - Aug 2024</h5>
-                            <h5 class="extra-bolded-title">E2open</h5>
-                            <h5 class="extra-location">Holland, Michigan</h5>
-                            <h5 class="extra-position">Cloud Operations Engineer Intern</h5>
+                            <p class="heading7">Sep 2024 – Present</p>
+                            <p class="experience-line"><span class="extra-bolded-title">Calvin University</span> <span class="extra-location">Grand Rapids, Michigan</span></p>
+                            <p class="extra-position">Web Assistant</p>
                         </div>
                         <div class="extra-1">
-                            <h5 class="heading7">Sep 2024 - Present</h5>
-                            <h5 class="extra-bolded-title">Calvin University</h5>
-                            <h5 class="extra-location">Grand Rapids, Michigan</h5>
-                            <h5 class="extra-position">Web Assistant</h5>
+                            <p class="heading7">May 2025 – Aug 2025</p>
+                            <p class="experience-line"><span class="extra-bolded-title">Calvin University</span> <span class="extra-location">Grand Rapids, Michigan</span></p>
+                            <p class="extra-position">Research Assistant Intern</p>
                         </div>
                         <div class="extra-1">
-                            <h5 class="heading7">Apr 2023 - Apr 2024</h5>
-                            <h5 class="extra-bolded-title">Rangeela</h5>
-                            <h5 class="extra-location">Grand Rapids, Michigan</h5>
-                            <h5 class="extra-position">Visual Designer</h5>
+                            <p class="heading7">Jan 2024 – Present</p>
+                            <p class="experience-line"><span class="extra-bolded-title">Abstraction</span> <span class="extra-location">Grand Rapids, Michigan</span></p>
+                            <p class="extra-position">Web &amp; UI/UX Developer</p>
                         </div>
                         <div class="extra-1">
-                            <h5 class="heading7">Sep 2023 - Present</h5>
-                            <h5 class="extra-bolded-title">Abstraction</h5>
-                            <h5 class="extra-location">Grand Rapids, Michigan</h5>
-                            <h5 class="extra-position">Web & UI/UX Developer</h5>
+                            <p class="heading7">Aug 2024, 2025</p>
+                            <p class="experience-line"><span class="extra-bolded-title">International Orientation</span> <span class="extra-location">Grand Rapids, Michigan</span></p>
+                            <p class="extra-position">Orientation Leader / Assistant</p>
                         </div>
                         <div class="extra-1">
-                            <h5 class="heading7">Aug 2023 - Apr 2024</h5>
-                            <h5 class="extra-bolded-title">Mu Kappa</h5>
-                            <h5 class="extra-location">Grand Rapids, Michigan</h5>
-                            <h5 class="extra-position">Secretary & Event Coordinator</h5>
-                        </div>
-                        <div class="extra-1">
-                            <h5 class="heading7">Feb 2023 - Present</h5>
-                            <h5 class="extra-bolded-title">Formula SAE</h5>
-                            <h5 class="extra-location">Grand Rapids, Michigan</h5>
-                            <h5 class="extra-position">Computer Science & Design Division</h5>
+                            <p class="heading7">May 2024 – Aug 2024</p>
+                            <p class="experience-line"><span class="extra-bolded-title">E2open</span> <span class="extra-location">Holland, Michigan</span></p>
+                            <p class="extra-position">Cloud Operations Engineer Intern</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         </section>
-        <section id="Contact">
-        <div class="contact">
-            <div class="work-section">
-                <div class="work-section-header">
-                    <div class="section-header">
-                        <div class="section-title">
-                            <h1 class="work-heading-1">🤙</h1>
-                            <h1 class="work-heading-2">Contact</h1>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <section id="Contact" class="section section--contact" aria-labelledby="contact-heading">
+        <div class="contact container">
+            <header class="section-heading">
+                <p class="section-label">Get in touch</p>
+                <h2 id="contact-heading" class="section-title">Contact</h2>
+            </header>
             <div class="contact-box">
                 <div class="contact-left">
                     <p class="contact-p">Feel free to reach out if you're interested in learning more about my projects and experiences.</p>
-                    <a href="https://www.linkedin.com/in/joshuapark72" class="linkedin-button">Linkedin</a>
+                    <a href="https://www.linkedin.com/in/joshuapark72" class="btn btn--primary btn--block" rel="noopener noreferrer" target="_blank">LinkedIn</a>
                 </div>
                 <div class="contact-right">
-                    <div class="extra-content">
-                        <div class="contact-1">
-                            <h5 class="extra-bolded-title">Email</h5>
-                            <h5 class="extra-position">joshuapark65@gmail.com</h5>
+                    <div class="contact-details">
+                        <div class="contact-row">
+                            <p class="contact-row__label">Email</p>
+                            <p class="contact-row__value"><a href="mailto:joshuapark65@gmail.com">joshuapark65@gmail.com</a></p>
                         </div>
-                        <div class="contact-2">
-                            <h5 class="extra-bolded-title">Number</h5>
-                            <h5 class="extra-position">616-329-5345</h5>
+                        <div class="contact-row">
+                            <p class="contact-row__label">Phone</p>
+                            <p class="contact-row__value"><a href="tel:+16163295345">616-329-5345</a></p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         </section>
+        </main>
+        <script>
+        (function () {
+            var mq = window.matchMedia("(min-width: 900px)");
+            var content = document.querySelector(".contentbox");
+            var frame = document.querySelector(".image");
+            if (!content || !frame) return;
+
+            function syncHeroImageHeight() {
+                if (!mq.matches) {
+                    frame.style.height = "";
+                    return;
+                }
+                frame.style.height = content.offsetHeight + "px";
+            }
+
+            if (typeof ResizeObserver !== "undefined") {
+                new ResizeObserver(syncHeroImageHeight).observe(content);
+            }
+            if (typeof mq.addEventListener === "function") {
+                mq.addEventListener("change", syncHeroImageHeight);
+            } else {
+                mq.addListener(syncHeroImageHeight);
+            }
+            window.addEventListener("resize", syncHeroImageHeight);
+            if (document.fonts && document.fonts.ready) {
+                document.fonts.ready.then(syncHeroImageHeight);
+            }
+            syncHeroImageHeight();
+        })();
+        </script>
     </body>
 </html>
