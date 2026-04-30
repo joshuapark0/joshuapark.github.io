@@ -55,8 +55,12 @@
                     <p class="section-label">Portfolio</p>
                     <h2 id="work-heading" class="section-title">Selected Work</h2>
                 </header>
+                <div class="work-tabs" role="tablist" aria-label="Project categories">
+                    <button class="work-tab is-active" type="button" role="tab" aria-selected="true" data-filter="software">Software/Web Development</button>
+                    <button class="work-tab" type="button" role="tab" aria-selected="false" data-filter="design">Graphic Design</button>
+                </div>
                 <div class="project-grid">
-                        <a href="https://github.com/ivanwidjanarkoo/ERP_Sys" class="project-card project-card--tint-c">
+                        <a href="https://github.com/ivanwidjanarkoo/ERP_Sys" class="project-card project-card--tint-c" data-category="software">
                             <div class="project-card__body">
                                 <h3 class="project-card__title">ERP System</h3>
                                 <p class="project-card__intro">Full-stack ERP for organizations: dashboard metrics, members, roles, events, projects, and finances, plus a Flow Builder for automated workflows. React, Node.js, Express, and PostgreSQL with role-based access.</p>
@@ -69,7 +73,7 @@
                                 <img src="erp-dashboard.png" alt="ERP organization dashboard with members, events, projects, and financial metrics">
                             </div>
                         </a>
-                        <a href="https://github.com/orgs/TideyTeam/repositories" class="project-card project-card--tint-a">
+                        <a href="https://github.com/orgs/TideyTeam/repositories" class="project-card project-card--tint-a" data-category="software">
                             <div class="project-card__body">
                                 <h3 class="project-card__title">Calvin Klean Laundry App</h3>
                                 <p class="project-card__intro">This is a software engineering project where we developed a laundry app that keeps track of the machines in the college dorms. I spearheaded the UI/UX and the React-Native Application development.</p>
@@ -82,7 +86,7 @@
                                 <img src="Calvin Klean.png" alt="Calvin Klean laundry app preview">
                             </div>
                         </a>
-                        <a href="https://abstractionwebsite-89f4f.web.app/" class="project-card project-card--tint-b">
+                        <a href="https://abstractionwebsite-89f4f.web.app/" class="project-card project-card--tint-b" data-category="software">
                             <div class="project-card__body">
                                 <h3 class="project-card__title">Abstraction Website</h3>
                                 <p class="project-card__intro">Led the design and development of the Abstraction Computer Science Club website, creating an engaging and user-friendly platform to showcase the club's activities and initiatives.</p>
@@ -95,7 +99,7 @@
                                 <img src="Abstraction.png" alt="Abstraction CS club website preview">
                             </div>
                         </a>
-                        <a href="https://acrobat.adobe.com/link/review?uri=urn:aaid:scds:US:d1795049-edfd-320e-98df-6e5ed27ae1e7" class="project-card project-card--tint-c">
+                        <a href="https://acrobat.adobe.com/link/review?uri=urn:aaid:scds:US:d1795049-edfd-320e-98df-6e5ed27ae1e7" class="project-card project-card--tint-c" data-category="design">
                             <div class="project-card__body">
                                 <h3 class="project-card__title">Graphic Design Publication</h3>
                                 <p class="project-card__intro">This publication showcases the work I created in Graphic Design Process one. Projects like Grids, Progressive Typography, and Bitmap are featured, which are the building blocks of graphic design.</p>
@@ -108,7 +112,7 @@
                                 <img src="GridCover.png" alt="Graphic design publication cover">
                             </div>
                         </a>
-                        <a href="https://github.com/joshuapark0/Pizza-Website" class="project-card project-card--tint-d">
+                        <a href="https://github.com/joshuapark0/Pizza-Website" class="project-card project-card--tint-d" data-category="software">
                             <div class="project-card__body">
                                 <h3 class="project-card__title">Pizza Website</h3>
                                 <p class="project-card__intro">This is web development project where we developed a Pizza website with JavaScript functions. I was able to lead the team with taking charge of the Design and layout of the website, aiming a seamless digital experience tailored for pizza orders.</p>
@@ -121,7 +125,7 @@
                                 <img src="MarioPizzaShop.png" alt="Mario Pizza Shop website preview">
                             </div>
                         </a>
-                        <a href="https://github.com/joshuapark0/MyLuvsWebsite" class="project-card project-card--tint-a">
+                        <a href="https://github.com/joshuapark0/MyLuvsWebsite" class="project-card project-card--tint-a" data-category="software">
                             <div class="project-card__body">
                                 <h3 class="project-card__title">MyLuvs Website</h3>
                                 <p class="project-card__intro">This is an ongoing project where I am spearheading the design and development of a mobile-responsive website for MyLuvs, a prominent clothing company, aiming a seamless digital experience tailored for mobile users.</p>
@@ -134,7 +138,7 @@
                                 <img src="MyLuvsPreview.png" alt="MyLuvs clothing website preview">
                             </div>
                         </a>
-                        <a href="https://github.com/joshuapark0/Frog-Game.git" class="project-card project-card--tint-b">
+                        <a href="https://github.com/joshuapark0/Frog-Game.git" class="project-card project-card--tint-b" data-category="software">
                             <div class="project-card__body">
                                 <h3 class="project-card__title">Frog Game</h3>
                                 <p class="project-card__intro">The goal of this game is to catch as many insects in the limited time. Every time you click on the insect that moves around the screen, the frog shoots its tongue and accumulates points.</p>
@@ -234,9 +238,11 @@
             var mq = window.matchMedia("(min-width: 900px)");
             var content = document.querySelector(".contentbox");
             var frame = document.querySelector(".image");
-            if (!content || !frame) return;
 
             function syncHeroImageHeight() {
+                if (!content || !frame) {
+                    return;
+                }
                 if (!mq.matches) {
                     frame.style.height = "";
                     return;
@@ -244,19 +250,46 @@
                 frame.style.height = content.offsetHeight + "px";
             }
 
-            if (typeof ResizeObserver !== "undefined") {
+            if (content && frame && typeof ResizeObserver !== "undefined") {
                 new ResizeObserver(syncHeroImageHeight).observe(content);
             }
-            if (typeof mq.addEventListener === "function") {
+            if (content && frame && typeof mq.addEventListener === "function") {
                 mq.addEventListener("change", syncHeroImageHeight);
-            } else {
+            } else if (content && frame) {
                 mq.addListener(syncHeroImageHeight);
             }
-            window.addEventListener("resize", syncHeroImageHeight);
-            if (document.fonts && document.fonts.ready) {
+            if (content && frame) {
+                window.addEventListener("resize", syncHeroImageHeight);
+            }
+            if (content && frame && document.fonts && document.fonts.ready) {
                 document.fonts.ready.then(syncHeroImageHeight);
             }
             syncHeroImageHeight();
+
+            var tabButtons = document.querySelectorAll(".work-tab");
+            var projectCards = document.querySelectorAll(".project-card[data-category]");
+
+            function applyWorkFilter(category) {
+                projectCards.forEach(function (card) {
+                    var matches = card.getAttribute("data-category") === category;
+                    card.classList.toggle("is-hidden", !matches);
+                });
+
+                tabButtons.forEach(function (button) {
+                    var isActive = button.getAttribute("data-filter") === category;
+                    button.classList.toggle("is-active", isActive);
+                    button.setAttribute("aria-selected", String(isActive));
+                });
+            }
+
+            if (tabButtons.length > 0 && projectCards.length > 0) {
+                tabButtons.forEach(function (button) {
+                    button.addEventListener("click", function () {
+                        applyWorkFilter(button.getAttribute("data-filter"));
+                    });
+                });
+                applyWorkFilter("software");
+            }
         })();
         </script>
     </body>

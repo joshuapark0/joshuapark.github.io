@@ -439,6 +439,46 @@ a:hover {
     color: var(--color-accent);
 }
 
+/* Work tabs */
+.work-tabs {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    margin-bottom: var(--space-6);
+    padding: var(--space-1);
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+    background: var(--color-surface);
+}
+
+.work-tab {
+    border: 0;
+    background: transparent;
+    color: var(--color-text-muted);
+    font: inherit;
+    font-size: 0.9rem;
+    font-weight: 600;
+    line-height: 1.2;
+    padding: var(--space-2) var(--space-4);
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background var(--transition-fast), color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.work-tab:hover {
+    color: var(--color-text);
+}
+
+.work-tab.is-active {
+    background: var(--color-text);
+    color: #fff;
+    box-shadow: var(--shadow-sm);
+}
+
+.work-tab:focus-visible {
+    outline-offset: 2px;
+}
+
 /* Project grid & cards */
 .project-grid {
     display: grid;
@@ -559,6 +599,10 @@ a:hover {
 .project-card__media--erp img {
     object-fit: cover;
     object-position: top center;
+}
+
+.project-card.is-hidden {
+    display: none;
 }
 
 /* About */
