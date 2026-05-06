@@ -45,6 +45,7 @@ Then Open:
   http://localhost:3000
 
 Run the following SQL in Supabase:
+```bash
 create table leads (
   id uuid primary key default gen_random_uuid(),
   full_name text not null,
@@ -56,3 +57,5 @@ create table leads (
 );
 
 alter table leads enable row level security;
+
+```
